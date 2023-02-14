@@ -15,7 +15,8 @@ function App() {
   useEffect(() => {
     fetch(`${pokeApiDomain}${currentId}`)
     .then(response => response.json())
-    .then((data)=>{
+    .then((data)=>
+    {
       setCurrentId(data.id);
       setPokemon(data);
 
@@ -24,8 +25,8 @@ function App() {
       .then((r)=>r.json())
       .then((res)=> setWeaknesses(res.damage_relations.double_damage_from)));
       setLoading(false)
-
-    })
+    }
+    )
     .catch((err)=>
     console.log(err))
   }, [currentId]);
