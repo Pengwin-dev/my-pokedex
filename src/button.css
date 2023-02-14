@@ -1,0 +1,17 @@
+.arrow-button {
+    background-color: #ccc;
+    color: #5a2952;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    flex-direction: space-between;
+}
+
+.arrow-button.left::before {
+    content: "-";
+}
+
+.arrow-button.right::before {
+    content: "+";
+}
